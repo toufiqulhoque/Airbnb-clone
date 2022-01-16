@@ -3,7 +3,8 @@ import './Search.css'
 import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
-import PeopleIcon from '@mui/icons-material/People'; import { useHistory } from "react-router-dom";
+import PeopleIcon from '@mui/icons-material/People';
+import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
 const Search = () => {
     //Date Picker Component
@@ -12,8 +13,8 @@ const Search = () => {
     const [endDate, setEndDate] = useState(new Date());
 
     const selectionRange = {
-        startDate: new Date(),
-        endDate: new Date(),
+        startDate: startDate,
+        endDate: endDate,
         key: 'selection',
     }
     function handleSelect(ranges) {
