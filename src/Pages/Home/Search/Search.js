@@ -8,7 +8,7 @@ import { useHistory } from "react-router-dom";
 import Button from '@mui/material/Button';
 const Search = () => {
     //Date Picker Component
-
+    const history = useHistory()
     const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState(new Date());
 
@@ -28,7 +28,7 @@ const Search = () => {
                 Number of guests <PeopleIcon />
             </h2>
             <input min={0} defaultValue={2} type="number" />
-            <Button >Search Airbnb</Button>
+            <Button onClick={() => history.push('/search')}>Search Airbnb</Button>
         </div>
     );
 };
